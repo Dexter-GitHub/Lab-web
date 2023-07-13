@@ -1,0 +1,38 @@
+/* css priority = selector(선택자 간에는 순서차이) < class < id */
+h1 {
+    font-size: 45px;
+    /* text-align: center; */
+    padding: 20px;
+    border-bottom: 1px solid gray;
+    margin: 0;
+}
+ol {
+    border-right: 1px solid gray;
+    width: 100px;
+    margin: 0;
+    padding: 20px;
+}
+body {
+    margin: 0;
+}
+#grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+#grid ol {
+    padding-left: 33px;
+}
+#grid #article {
+    padding-left: 25px;         
+}
+@media (max-width:800px) {
+    #grid {
+        display: block;
+    }
+    ol {
+        border-right: none;
+    }
+    h1 {
+        border-bottom: none;
+    }
+}
